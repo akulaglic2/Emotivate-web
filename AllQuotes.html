@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<title>Quotes</title>
+  <title>Quotes</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
- <link href="addQuotes.css" rel="stylesheet" >
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link href="addQuotes.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="AllQuotes.js">  </script>
@@ -18,41 +19,38 @@
   <script src="CategoryAjax.js">  </script>
 
 </head>
+
 <body onload="QuoteList()">
 
-   <!-- Sidebar -->
-<div class="sidenav" >
-  <h3 class="w3-xlarge"><i class="fa fa-bars"></i> Menu</h3>
-  <a href="AllQuotes.html"  class="w3-large"><i class="fa fa-home"></i> Home</a>
-  <a href="addQuotes.html"class="w3-large"><i class="fa fa-edit"></i> Create form</a>
-  <a href="Login.html"class="w3-large" id="signout" onclick="deleteSession()"><i class="fa fa-sign-out"></i> Sign out</a>
-</div>
+  <!-- Sidebar -->
+  <div class="sidenav">
+    <h3 class="w3-xlarge"><i class="fa fa-bars"></i> Menu</h3>
+    <a href="AllQuotes.html" class="w3-large"><i class="fa fa-home"></i> Home</a>
+    <a href="addQuotes.html" class="w3-large"><i class="fa fa-edit"></i> Create form</a>
+    <a href="Login.html" class="w3-large" id="signout" onclick="deleteSession()"><i class="fa fa-sign-out"></i> Sign
+      out</a>
+  </div>
 
-<!-- Page Content -->
-<div style="margin-left:20%">
+  <!-- Page Content -->
+  <div style="margin-left:20%">
 
-<div class="w3-container w3-teal">
-        <h1 class="w3-xxlarge" style="font-family: 'Exo', sans-serif"><i class="fa fa-home"></i> Home</h1>
-</div>
+    <div class="w3-container w3-teal">
+      <h1 class="w3-xxlarge" style="font-family: 'Exo', sans-serif"><i class="fa fa-home"></i> Home</h1>
+    </div>
 
+    <div class="w3-container">
+      <div class="container" id="container"></div>
+    </div>
 
-<div class="w3-container">
-        <div class="container" id="container"></div>
+  </div>
 
-       
-                
-        
-                
-</div>
+  <script>
 
-</div>
-      
-<script>
+    function deleteSession() {
+      sessionStorage.removeItem("user");
+    }
+  </script>
 
-function deleteSession() {
-    sessionStorage.removeItem("user");
-}
-</script>
-              
 </BODY>
+
 </html>
