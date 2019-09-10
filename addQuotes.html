@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Develop</title>
+ <link href="addQuotes.css" rel="stylesheet" >
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="addQuotes.css" rel="stylesheet" >
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+ <script src="AuthorAjax.js"></script>
+ <script src="CategoryAjax.js"></script>
+ <script src="addQuotes.js"></script>
+ <script src="QuoteAjax.js"></script>
+ 
+</head>
+
+<BODY onload="getAll()">
+
+        <div class="sidenav" >
+            <h3 class="w3-xlarge"><i class="fa fa-bars"></i> Menu</h3>
+            <a href="AllQuotes.html" class="w3-large"><i class="fa fa-home"></i> Home</a>
+            <a href="addQuotes.html"class="w3-large"><i class="fa fa-edit"></i> Create Form</a>
+
+            <a href="Login.html"class="w3-large" id="signout" onclick="deleteSession()"><i class="fa fa-sign-out"></i> Sign out</a>
+
+              </div>
+              
+              <!-- Page Content -->
+              <div style="margin-left:20%">
+              
+              <div class="w3-container w3-teal">
+                <h1 class="w3-xxlarge"  style="font-family: 'Exo', sans-serif;"><i class="fa fa-edit"></i> Create Form</h1>
+                               
+              </div>
+              
+              
+              <div class="w3-container">
+                    <div id="add" >
+                        <form>
+                            
+                            <div id="divCategories" ></div>  
+                            <label>Choose category</label> 
+
+                            <div id="divAuthors" ></div>   
+                            <label>Choose author</label>
+
+                            <textarea id="quoteDescription" ></textarea>
+                            <label >Add quotes</label><br>
+                            <input type="button" name="add" value="Add quote" onclick="createQuote()">
+                            
+                        </form>
+                            <form id="category">
+                                <table class="tablee">
+                                    <tr>
+                                        <td colspan="2"><label >Adding categories and authors:</label></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                            <td>
+                                                <input type="text" name="Category" id="newCategory">
+                                                <label >Add category</label>
+                                            </td>
+                                    
+                                            <td>
+                                                <input type="text" id="newAuthor" name="Author" >
+                                                <label >Add author</label>
+                                            </td>
+                                        </tr>
+                            
+                                    <tr>
+                                            
+                                        <td><input type="button" name="addCategory" value="Add category" onclick="createCategory()"></td>
+                                        
+                                        <td><input type="button" name="addAuthor" value="Add author" onclick="createAuthor()"></td>
+                                    
+                                    </tr>
+                            
+                            
+                                </table>
+                            </form>
+                        </div>
+                                   
+                      
+                              
+              </div>
+              
+              </div>
+
+
+
+</BODY>
+</html>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Poppins:300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Forum');
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Josefin+Slab:100,100i,300,300i,400,400i,600,600i,700,700i|Marcellus|Nanum+Myeongjo:400,700,800|Old+Standard+TT:400,400i,700|Prata|Vidaloka');
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+form{
+    width: 900px;
+    height:20%;
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+}
+
+
+#category, #author{
+    width: 500px;
+    height:10%;
+    border-radius: 4px;
+    font-family: 'Exo', sans-serif;
+}
+
+textarea {
+     width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    padding: 1em 0 .8em;
+    font-family: 'Exo', sans-serif;
+    color: inherit;
+    outline: none;
+    resize: none;
+    
+  }
+
+input[type=button] {
+    all: unset;
+    margin-top: 2.4em;
+    background: transparent;
+    border: 2px solid white;
+    padding: 1em 4em;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    position: relative;
+    transition: all 300ms ease;
+    background: rgb(42, 155, 121);
+    color: white;
+    font-family: 'Exo', sans-serif;
+    
+}
+input[type=button]:hover {
+    background-color: rgb(62, 179, 143);
+}
+input[name=Category], input[name=Author] {
+   
+        width: 100%;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid;
+        padding: 1em 0 .8em;
+        text-align: left;
+        font-family: 'Exo', sans-serif;
+        color: inherit;
+        outline: none;
+}
+
+.tablee {
+    margin: 30px;
+}
+.tablee td{
+    padding: 0 100px 0 20px;
+}
+#spinnerAuthors, #spinnerCategories {
+    width: 100%;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid;
+        padding: 1em 0 .8em;
+        text-align: center;
+        font-size: 18px;
+        font-family: inherit;
+        font-weight: 300;
+        line-height: 1.5;
+        color: inherit;
+        outline: none;
+
+        /*round arrow*/
+        background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        radial-gradient(#ddd 70%, transparent 72%);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - .5em) .5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1.5em 1.5em;
+    background-repeat: no-repeat;
+    
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+h3 {
+    font-family: 'Exo', sans-serif;
+    padding: 20px;
+  }
+    
+    .sidenav {
+      height: 100%;
+      width: 20%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      text-decoration: none;
+      font-family: 'Exo', sans-serif;
+      background-color: rgb(218, 216, 216);
+    }
+    
+    .sidenav a {
+      font-size: 18px;
+      display: block;
+      text-decoration: none;
+      padding: 20px;
+      
+      background-color: rgb(218, 216, 216);
+    }
+    
+    .sidenav a:hover{
+      background-color: rgb(167, 164, 164);
+      text-decoration: none;
+    }
+  
+    .sidenav a:link {
+      background: rgb(42, 155, 121);
+      text-decoration: none;
+      color: white;
+    }
+    .container {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 18px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+.container1 {
+    font-family: 'Exo', sans-serif;
+    width: 90%;
+}
+/*close icon*/
+
+.x {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+	width: 23px;
+	height: 23px;
+	border: 2px solid #eef5df;
+	background-color: #ff5248;
+    border-radius: 50%;
+    padding-bottom: 24px;
+    padding-right: 14px;
+	}
+.x::before, .x::after {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	width: 13px;
+	height: 3px;
+	content: "";
+	background-color: #eef5df;
+	display: none;
+	}
+.x::before {
+	-ms-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	}
+.x::after {
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	}
+.x:hover { cursor: pointer; }
+.x:hover::before, .x:hover::after { display: block; }
+
+#signout {
+   position: absolute;
+   bottom: 10px;
+   width: 100%;
+ 
+}
+
+.quotes {
+    padding-right: 25px;
+}
