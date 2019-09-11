@@ -14,7 +14,7 @@ var AllQuotesAjax = (function () {
                         }
                     }
 
-                    ajax.open("DELETE", "https://emotivate-node.herokuapp.com/quotes/" + id + "?access_token=" + access_token, true);
+                    ajax.open("DELETE", BASE_URL+"/quotes/" + id + "?access_token=" + access_token, true);
                     ajax.send();
                 } 
 
@@ -37,7 +37,7 @@ var AllQuotesAjax = (function () {
                         callback(jsonList)
                     }
                 }
-                ajax.open("GET", "https://emotivate-node.herokuapp.com/quotes?category_id=" + category_id, true);
+                ajax.open("GET", BASE_URL+"/quotes?category_id=" + category_id, true);
                 ajax.send();
             }
         }

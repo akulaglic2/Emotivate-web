@@ -15,7 +15,7 @@ var QuoteAjax = (function () {
                     category_id: idCategory
                 };
 
-                ajax.open("POST", "https://emotivate-node.herokuapp.com/quotes?access_token=" + access_token, true);
+                ajax.open("POST", BASE_URL+"/quotes?access_token=" + access_token, true);
                 ajax.setRequestHeader("Content-Type", "application/json");
                 ajax.send(JSON.stringify(json));
             }

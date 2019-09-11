@@ -18,7 +18,7 @@ var LoginAjax = (function () {
                     password: password
                 };
 
-                ajax.open("POST", "https://emotivate-node.herokuapp.com/login", true);
+                ajax.open("POST", BASE_URL+"/login", true);
                 ajax.setRequestHeader("Content-Type", "application/json");
                 ajax.send(JSON.stringify(json));
             }
