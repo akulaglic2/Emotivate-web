@@ -21,7 +21,7 @@ var CategoryAjax = (function () {
 
                 }
 
-                ajax.open("GET", "https://emotivate-node.herokuapp.com/categories", true);
+                ajax.open("GET", BASE_URL+"/categories", true);
                 ajax.send();
             },
             getCategoriesForTabs: function (callback) {
@@ -51,7 +51,7 @@ var CategoryAjax = (function () {
                     }
                 }
 
-                ajax.open("GET", "https://emotivate-node.herokuapp.com/categories", true);
+                ajax.open("GET", BASE_URL+"/categories", true);
                 ajax.send();
 
             },
@@ -66,7 +66,7 @@ var CategoryAjax = (function () {
                     name: name
                 };
                 
-                ajax.open("POST", "https://emotivate-node.herokuapp.com/categories?access_token=" + access_token, true);
+                ajax.open("POST", BASE_URL+"/categories?access_token=" + access_token, true);
                 ajax.setRequestHeader("Content-Type", "application/json");
                 ajax.send(JSON.stringify(json));
             }

@@ -20,7 +20,7 @@ var AuthorAjax = (function () {
                     }
                 }
 
-                ajax.open("GET", "https://emotivate-node.herokuapp.com/authors", true);
+                ajax.open("GET", BASE_URL+"/authors", true);
                 ajax.send();
             },
 
@@ -35,7 +35,7 @@ var AuthorAjax = (function () {
                     name: name
                 };
                 
-                ajax.open("POST", "https://emotivate-node.herokuapp.com/authors?access_token=" + access_token, true);
+                ajax.open("POST", BASE_URL+"/authors?access_token=" + access_token, true);
                 ajax.setRequestHeader("Content-Type", "application/json");
                 ajax.send(JSON.stringify(json));
             }
