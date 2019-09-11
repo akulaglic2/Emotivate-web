@@ -1,1 +1,1 @@
-var BASE_URL = "https://emotivate-node-develop.herokuapp.com"
+var BASE_URL = "https://emotivate-node.herokuapp.com"
