@@ -10,6 +10,7 @@ var AuthorAjax = (function () {
                         if (ajax.response.length == 0) return;
                         var jsonList = JSON.parse(ajax.response)
                         string += "<select id='spinnerAuthors' >";
+                        string += "<option value='NONE'>NONE</option>"
 
                         for (var i = 0; i < jsonList.length; i++)
                             string += "<option value=" + i + ">" + jsonList[i].name + "</option>";

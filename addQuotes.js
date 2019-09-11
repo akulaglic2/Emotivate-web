@@ -56,6 +56,7 @@ function extractAuthorId(authors, authorName) {
     for (i = 0; i < authors.length; i++) {
         if (authors[i].name == authorName) return authors[i].id;
     }
+    return null;
 }
 
 function createAuthor() {
