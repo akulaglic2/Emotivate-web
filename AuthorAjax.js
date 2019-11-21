@@ -8,11 +8,11 @@ var AuthorAjax = (function () {
                     var string = "";
                     if (ajax.readyState == 4 && ajax.status == 200) {
                         var jsonResponse= JSON.parse(ajax.response)
-                        if (jsonResponse.authors == 0) return;
+                        if (jsonResponse.authors.length == 0) return;
                         string += "<select id='spinnerAuthors' >";
                         string += "<option value='NONE'>NONE</option>"
 
-                        for (var i = 0; i < jsonResponse.authors; i++)
+                        for (var i = 0; i < jsonResponse.authors.length; i++)
                             string += "<option value=" + i + ">" +
                                      jsonResponse.authors[i].name + "</option>";
 
