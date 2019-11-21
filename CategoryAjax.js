@@ -67,7 +67,8 @@ var CategoryAjax = (function () {
                 };
                 
                 ajax.open("POST", BASE_URL+"/categories", true)
-                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.setRequestHeader("Content-Type", "application/json")
+                ajax.setRequestHeader("Accept", "application/json")
                 ajax.setRequestHeader("Authorization", access_token)
                 ajax.send(JSON.stringify(json));
             }

@@ -16,6 +16,8 @@ var AllQuotesAjax = (function () {
 
                     ajax.open("DELETE", BASE_URL+"/quotes/" + id, true);
                     ajax.setRequestHeader("Authorization", access_token)
+                    ajax.setRequestHeader("Accept", "application/json")
+                    ajax.setRequestHeader("Content-Type", "application/json")
                     ajax.send();
                 } 
 
@@ -39,6 +41,8 @@ var AllQuotesAjax = (function () {
                     }
                 }
                 ajax.open("GET", BASE_URL+"/quotes?category_id=" + category_id, true);
+                ajax.setRequestHeader("Content-Type", "application/json")
+                ajax.setRequestHeader("Accept", "application/json")
                 ajax.send();
             }
         }

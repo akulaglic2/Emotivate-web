@@ -16,7 +16,8 @@ var QuoteAjax = (function () {
                 };
 
                 ajax.open("POST", BASE_URL+"/quotes", true);
-                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.setRequestHeader("Content-Type", "application/json")
+                ajax.setRequestHeader("Accept", "application/json")
                 ajax.setRequestHeader("Authorization", access_token)
                 ajax.send(JSON.stringify(json));
             }

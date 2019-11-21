@@ -37,8 +37,9 @@ var AuthorAjax = (function () {
                 };
                 
                 ajax.open("POST", BASE_URL+"/authors", true);
-                ajax.setRequestHeader("Content-Type", "application/json");
                 ajax.setRequestHeader("Authorization", access_token)
+                ajax.setRequestHeader("Accept", "application/json")
+                ajax.setRequestHeader("Content-Type", "application/json")
                 ajax.send(JSON.stringify(json));
             }
         }

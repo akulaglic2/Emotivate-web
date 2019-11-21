@@ -19,7 +19,8 @@ var LoginAjax = (function () {
                 };
 
                 ajax.open("POST", BASE_URL+"/login", true);
-                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.setRequestHeader("Content-Type", "application/json")
+                ajax.setRequestHeader("Accept", "application/json")
                 ajax.send(JSON.stringify(json));
             }
         }
