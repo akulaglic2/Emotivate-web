@@ -24,7 +24,7 @@ var AuthorAjax = (function () {
                 ajax.send();
             },
 
-            createAuthor: function (name, access_token, callback) {
+            createAuthor: function (name, description, access_token, callback) {
                 var ajax = new XMLHttpRequest();
                 ajax.onreadystatechange = function () {
                     if (ajax.readyState == 4 && ajax.status == 200) {
@@ -32,7 +32,8 @@ var AuthorAjax = (function () {
                     }
                 }
                 var json = {
-                    name: name
+                    name: name,
+                    description : description
                 };
                 
                 ajax.open("POST", BASE_URL+"/authors", true);

@@ -63,9 +63,11 @@ function createAuthor() {
     var ajax = new AuthorAjax();
 
     var newAuthor = document.getElementById("newAuthor").value;
+    var newAuthorDescription = document.getElementById("newAuthorDescription").value
     var user = JSON.parse(sessionStorage.getItem("user"))
-    ajax.createAuthor(newAuthor, user.access_token, function () {
+    ajax.createAuthor(newAuthor, newAuthorDescription, user.access_token, function () {
         document.getElementById("newAuthor").value = "";
+        document.getElementById("newAuthorDescription").value = "";
         alert("Successfully created author!");
     })
 }
