@@ -7,16 +7,17 @@ var AuthorAjax = (function () {
                 ajax.onreadystatechange = function () {
                     var string = "";
                     if (ajax.readyState == 4 && ajax.status == 200) {
-                        if (ajax.response.length == 0) return;
-                        var jsonList = JSON.parse(ajax.response.authors)
+                        var jsonResponse= JSON.parse(ajax.response)
+                        if (jsonResponse.authors == 0) return;
                         string += "<select id='spinnerAuthors' >";
                         string += "<option value='NONE'>NONE</option>"
 
-                        for (var i = 0; i < jsonList.length; i++)
-                            string += "<option value=" + i + ">" + jsonList[i].name + "</option>";
+                        for (var i = 0; i < jsonResponse.authors; i++)
+                            string += "<option value=" + i + ">" +
+                                     jsonResponse.authors[i].name + "</option>";
 
                         divContent.innerHTML = string;
-                        callback(jsonList)
+                        callback(jsonResponse.authors)
                     }
                 }
 
