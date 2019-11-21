@@ -10,13 +10,13 @@ var AuthorAjax = (function () {
                         var jsonResponse= JSON.parse(ajax.response)
                         string += "<select id='spinnerAuthors' >";
                         string += "<option value='NONE'>NONE</option>"
-
-                        for (var i = 0; i < jsonResponse.authors.length; i++)
+                        if (!jsonResponse) return
+                        for (var i = 0; i < jsonResponse.length; i++)
                             string += "<option value=" + i + ">" +
-                                     jsonResponse.authors[i].name + "</option>";
+                                     jsonResponse[i].name + "</option>";
 
                         divContent.innerHTML = string;
-                        callback(jsonResponse.authors)
+                        callback(jsonResponse)
                     }
                 }
 
