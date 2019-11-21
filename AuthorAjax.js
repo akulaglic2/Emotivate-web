@@ -8,7 +8,7 @@ var AuthorAjax = (function () {
                     var string = "";
                     if (ajax.readyState == 4 && ajax.status == 200) {
                         if (ajax.response.length == 0) return;
-                        var jsonList = JSON.parse(ajax.response)
+                        var jsonList = JSON.parse(ajax.response.authors)
                         string += "<select id='spinnerAuthors' >";
                         string += "<option value='NONE'>NONE</option>"
 
