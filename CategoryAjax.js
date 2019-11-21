@@ -66,8 +66,9 @@ var CategoryAjax = (function () {
                     name: name
                 };
                 
-                ajax.open("POST", BASE_URL+"/categories?access_token=" + access_token, true);
+                ajax.open("POST", BASE_URL+"/categories", true)
                 ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.setRequestHeader("Authorization", access_token)
                 ajax.send(JSON.stringify(json));
             }
         }

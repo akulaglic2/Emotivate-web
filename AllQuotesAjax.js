@@ -14,7 +14,8 @@ var AllQuotesAjax = (function () {
                         }
                     }
 
-                    ajax.open("DELETE", BASE_URL+"/quotes/" + id + "?access_token=" + access_token, true);
+                    ajax.open("DELETE", BASE_URL+"/quotes/" + id, true);
+                    ajax.setRequestHeader("Authorization", access_token)
                     ajax.send();
                 } 
 

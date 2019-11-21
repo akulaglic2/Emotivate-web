@@ -15,8 +15,9 @@ var QuoteAjax = (function () {
                     category_id: idCategory
                 };
 
-                ajax.open("POST", BASE_URL+"/quotes?access_token=" + access_token, true);
+                ajax.open("POST", BASE_URL+"/quotes", true);
                 ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.setRequestHeader("Authorization", access_token)
                 ajax.send(JSON.stringify(json));
             }
         }
